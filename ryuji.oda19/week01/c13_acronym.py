@@ -1,2 +1,2 @@
 GivenSentence = input("Enter a sentence")
-if GivenSentence 
+if GivenSentence
