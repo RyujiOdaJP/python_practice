@@ -1,4 +1,4 @@
-GivenSentence = input("Enter a sentence")
+GivenSentence = input("Enter a sentence: ")
 
 OOP = "Object Oriented Programming"
 FP = "Functional Programming"

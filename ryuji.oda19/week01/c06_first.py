@@ -1,5 +1,4 @@
-GivenWord = []
-GivenWord = input("Enter something:")
+GivenWord = input("Enter something: ")
 
 if GivenWord == "":
     print('Nothing to display.')

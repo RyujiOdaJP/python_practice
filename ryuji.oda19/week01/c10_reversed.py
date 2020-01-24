@@ -1,11 +1,16 @@
-GivenWord = []
-GivenWord = input("Enter something: ")
-if GivenWord == "":
+List = list()
+given_word = input("Enter something: ")
+
+if given_word == "":
     print("Nothing to display.")
+
 else:
-    i = 1
-    Length = len(GivenWord)
-    while i <= Length :
-        reverse = Length - i
-        print(GivenWord[reverse] ,end = "")
-        i = i + 1
+
+    combine = ''
+    for i in range(len(given_word)):
+        List.append(given_word[-i - 1])
+
+    for x in range(len(given_word)):
+        combine = combine + List[x]
+
+    print(combine)

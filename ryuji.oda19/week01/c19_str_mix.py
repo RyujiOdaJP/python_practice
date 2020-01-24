@@ -1,33 +1,37 @@
-GivenWord = []
-GivenWord = input('Enter a word: ')
-j = len(GivenWord)
+given_word = input('Enter a word: ')
+j = len(given_word)
 
 
-def align():
+def align(word):
+    align_word = ""
     for i in range(2):
-        print(GivenWord[i], end="")
+        align_word += word[i]
+    return align_word
 
 
-def align_rev():
+def align_rev(word):
+    align_rev_word = ""
     for i in range(2):
-        print(GivenWord[1 - i], end="")
+        align_rev_word += word[-i + 1]
+    return align_rev_word
 
 
-def rev():
-    k = j - 1
+def rev(word):
+    rev_word = ""
     for i in range(2):
-        print(GivenWord[k], end="")
-        k = k - 1
+        rev_word += word[-i - 1]
+    return rev_word
 
 
 if j == 2:
-    for i in range(2):
-        align();
+
+    print(align(given_word) * 2)
+
 elif j == 1:
-    for i in range(4):
-        print(GivenWord[0], end="")
+    print(given_word[0] * 4)
+
 elif j == 0:
     print('0000')
+
 else:
-    align_rev();
-    rev();
+    print(align_rev(given_word) + rev(given_word))
