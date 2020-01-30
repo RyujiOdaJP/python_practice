@@ -11,9 +11,11 @@ def dict_shopping(li):
             amount += product
             quantity += int(element['quantity'])
 
+        amount = "{0:.2f}".format(amount)
         shopping_result = ('$' + str(amount), quantity)
         return shopping_result
 
     except TypeError and KeyError:
         return 'Invalid JSON'
-# print(dict_shopping([{"price" :19.99, "quantity" :1},{"price" :99.99, "quantity" :0}]))
+# print(dict_shopping([{'price': 123.49, 'quantity': 3}]))
+# print(dict_shopping([{'price': 0.01, 'quantity': 999}]))

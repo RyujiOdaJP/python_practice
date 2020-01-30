@@ -1,4 +1,4 @@
-def list_to_list(given):
+def list_to_lists(given):
     rtn = []
     li = []
 
@@ -21,6 +21,6 @@ def list_to_list(given):
 
 
 
-# print(list_to_list(['Hello']))
-# print(list_to_list(['A','a','B','b']))
-# print(list_to_list(['Hello','World']))
+print(list_to_lists(['Hello']))
+print(list_to_lists(['A','a','B','b']))
+print(list_to_lists(['Hello','World']))

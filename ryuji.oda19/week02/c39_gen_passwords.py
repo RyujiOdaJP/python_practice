@@ -1,7 +1,7 @@
 import random
 
 
-def gen_pass(chars, length, numbers):
+def gen_passwords(chars, length, numbers):
     rtn = []
     rdm = ''
 
@@ -14,5 +14,5 @@ def gen_pass(chars, length, numbers):
     return rtn
 
 
-# print(gen_pass('abc', 3, 2))
-# print(gen_pass('aBc_*&', 5, 3))
+# print(gen_passwords('abc', 3, 2))
+# print(gen_passwords('aBc_*&', 5, 3))
