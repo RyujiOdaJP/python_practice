@@ -6,4 +6,4 @@ def get_html(url):
     content = resp.text
     return content
 
-print(get_html('https://w3resource.com/'))
+# print(get_html('https://w3resource.com/'))
