@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{name}}</title>
+</head>
+<body>
+    {% if name == "kiyokiyo" %}
+    <h1>Special{{name}}schedule</h1>
+    {% elif name %}
+    <h1>{{name}}schedule</h1>
+    {% else %}
+    <h1>just schedule</h1>
+    {% endif %}
+
+    <img src="/static/images/schedule.png">
+
+
+    <form action="/index" method="POST">
+        <input type="text" name="name" placeholder="Enter name">
+        <input type="submit" value="Submit">
+      </form>
+
+    {% for text in word %}
+    <p>{{text}}</p>
+    {% endfor %}
+</body>
+</html>
