@@ -46,6 +46,7 @@ class ParseHtml:
         contest_name = []
         time = []
         str_time = []
+        modified_2H = []
         contest_name_time = ''
 
         for site in targetSite[:1]:
@@ -72,9 +73,9 @@ class ParseHtml:
                 # cContest = parse_contest.getText().split('\n')
 
 
-                print(parseTable,'\n')
-                print(time)
-                print(contest_name)
+                # print(parseTable,'\n')
+                # print(time)
+                # print(contest_name)
 
             # 検索結果が無かった場合の処理
             except AttributeError:
@@ -84,9 +85,13 @@ class ParseHtml:
             # 検索結果が有った場合の処理
         for i in range(len(time)):
             str_time.append(datetime.datetime.strptime(time[i], '%Y-%m-%d %H:%M:%S'))
-            print(str_time)
-            contest_name_time += contest_name[i] + ':\n' + time[i] +'(JPtime +0900)\n\n'
+            # print(str_time)
 
+            modified_2H.append(str_time[i] - datetime.timedelta(hours=2))
+
+            contest_name_time += contest_name[i] + ':\n' + str(modified_2H[i]) +'(KHtime +0700)\n\n'
+
+        # print(modified_2H)
         return contest_name_time
 
 # print(GetHtml().getText())
